@@ -36,8 +36,10 @@ body{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;ba
 .sidenav .logo-mark{font-family:'Noto Serif TC',serif;font-size:18px;font-weight:700;color:var(--gold);margin-bottom:16px}
 
 /* ── LAYOUT ── */
-.main{margin-left:52px}
-.section{padding:72px 80px;max-width:1040px;width:100%}
+.main{margin-left:52px;max-width:calc(100% - 52px)}
+.section{padding:0;width:100%}
+.section .page-wrap{max-width:1000px;margin:0 auto;padding:72px 80px}
+.inner{max-width:960px;margin:0 auto;width:100%}
 .section:nth-child(even){background:var(--white)}
 
 /* ── COVER ── */
@@ -235,7 +237,7 @@ hr.rule{border:none;border-top:1px solid var(--cream-d);margin:32px 0}
 @media (max-width: 900px) {
   .sidenav{display:none}
   .main,.cover{margin-left:0}
-  .section{padding:48px 32px}
+  .section .page-wrap{padding:48px 32px}
   .cover{padding:56px 32px 48px;min-height:auto}
   .cover-title{font-size:40px}
   .cover-sub{font-size:15px;margin-bottom:36px}
@@ -259,7 +261,7 @@ hr.rule{border:none;border-top:1px solid var(--cream-d);margin:32px 0}
   .swatch-row{flex-wrap:wrap}
 }
 @media (max-width: 600px) {
-  .section{padding:36px 20px}
+  .section .page-wrap{padding:36px 20px}
   .cover{padding:40px 20px 36px}
   .cover-title{font-size:32px}
   .cover-meta{grid-template-columns:1fr 1fr}
@@ -269,7 +271,6 @@ hr.rule{border:none;border-top:1px solid var(--cream-d);margin:32px 0}
   .phase-body{border-radius:0 0 4px 4px;border-left:1px solid var(--cream-d);border-top:none}
   .comp-header{flex-wrap:wrap}
   .two-col{grid-template-columns:1fr}
-  .logo-showcase{flex-direction:column;align-items:flex-start}
   .card-p{padding:18px 16px}
   .closing{padding:36px 20px}
   .sec-title{font-size:22px}
@@ -322,7 +323,7 @@ hr.rule{border:none;border-top:1px solid var(--cream-d);margin:32px 0}
 
 <!-- 目錄 -->
 <div class="section" style="background:var(--cream);" id="toc">
-  <div class="sec-hd">
+  <div class="page-wrap"><div class="sec-hd">
     <div class="sec-num">TABLE OF CONTENTS</div>
     <div class="sec-title">報告目錄</div>
   </div>
@@ -333,15 +334,14 @@ hr.rule{border:none;border-top:1px solid var(--cream-d);margin:32px 0}
       <li><span class="toc-num">02</span><a class="toc-a" href="#s2">管道效益對照矩陣 — 12 個管道 × 4 家競品</a></li>
       <li><span class="toc-num">03</span><a class="toc-a" href="#s3">目標族群需求拆解 — 四大 TA 的痛點與決策關鍵</a></li>
       <li><span class="toc-num">04</span><a class="toc-a" href="#s4">品牌策略規劃 — 競品缺口、三位一體模型、差異化方向</a></li>
-      <li><span class="toc-num">05</span><a class="toc-a" href="#s5">品牌識別建議 — 命名、視覺、色調、Logo 方向</a></li>
+      <li><span class="toc-num">05</span><a class="toc-a" href="#s5">品牌識別建議 — 命名、視覺、色調</a></li>
       <li><span class="toc-num">06</span><a class="toc-a" href="#s6">12 週執行期程 — 分階段行動清單</a></li>
     </ul>
   </div>
-</div>
+</div></div>
 
 <!-- ===== S1 競品分析 ===== -->
-<div class="section" id="s1">
-  <div class="sec-hd">
+<div class="section" id="s1"><div class="page-wrap"><div class="sec-hd">
     <div class="sec-num">SECTION 01 · COMPETITIVE ANALYSIS</div>
     <div class="sec-title">競品深度分析</div>
     <div class="sec-desc">針對台灣財商教育市場四家主要競品，從網站結構、銷售管道、內容策略、獲客漏斗等面向進行實際檢視，評估各管道執行成效，並整理缺口與優化建議。</div>
@@ -455,11 +455,10 @@ hr.rule{border:none;border-top:1px solid var(--cream-d);margin:32px 0}
       </div>
     </div>
   </div>
-</div>
+</div></div>
 
 <!-- ===== S2 管道矩陣 ===== -->
-<div class="section" id="s2">
-  <div class="sec-hd">
+<div class="section" id="s2"><div class="page-wrap"><div class="sec-hd">
     <div class="sec-num">SECTION 02 · CHANNEL MATRIX</div>
     <div class="sec-title">管道效益綜合對照</div>
     <div class="sec-desc">12 個銷售管道跨四家競品的執行狀態與整體效益評估，清楚看出哪些管道已被驗證、哪些仍有空白。</div>
@@ -491,11 +490,10 @@ hr.rule{border:none;border-top:1px solid var(--cream-d);margin:32px 0}
     </tbody>
   </table>
   <p class="note">★★★ 執行完整效果明顯 &nbsp;★★☆ 有在做但效果中等 &nbsp;★☆ 有做但效果待加強 &nbsp;— 未使用此管道</p>
-</div>
+</div></div>
 
 <!-- ===== S3 TA ===== -->
-<div class="section" id="s3">
-  <div class="sec-hd">
+<div class="section" id="s3"><div class="page-wrap"><div class="sec-hd">
     <div class="sec-num">SECTION 03 · TARGET AUDIENCE</div>
     <div class="sec-title">四大目標族群需求拆解</div>
     <div class="sec-desc">四個 TA 其實是同一個人生的不同階段——受薪族學好個人財務→有天創業成企業主→企業規模起來需傳承規劃→最終就是屆退族的問題。這個品牌有機會做成「人生財務地圖」，讓學員一直升級而不離開。</div>
@@ -551,11 +549,10 @@ hr.rule{border:none;border-top:1px solid var(--cream-d);margin:32px 0}
       </div>
     </div>
   </div>
-</div>
+</div></div>
 
 <!-- ===== S4 策略 ===== -->
-<div class="section" id="s4">
-  <div class="sec-hd">
+<div class="section" id="s4"><div class="page-wrap"><div class="sec-hd">
     <div class="sec-num">SECTION 04 · BRAND STRATEGY</div>
     <div class="sec-title">品牌策略規劃</div>
     <div class="sec-desc">這四家競品各有所長，但沒有任何一家同時把三件事做好。這個空白，就是這個品牌可以站的位置。</div>
@@ -614,11 +611,10 @@ hr.rule{border:none;border-top:1px solid var(--cream-d);margin:32px 0}
     <div style="font-size:11px;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:8px">品牌定位一句話</div>
     <div style="font-family:'Noto Serif TC',serif;font-size:18px;color:var(--green);line-height:1.7">「競品都在說教你賺錢——這個品牌說的是陪你把錢管好、守好、傳下去。」</div>
   </div>
-</div>
+</div></div>
 
 <!-- ===== S5 品牌識別 ===== -->
-<div class="section" id="s5">
-  <div class="sec-hd">
+<div class="section" id="s5"><div class="page-wrap"><div class="sec-hd">
     <div class="sec-num">SECTION 05 · BRAND IDENTITY</div>
     <div class="sec-title">品牌識別建議</div>
     <div class="sec-desc">從命名邏輯、視覺色調到 Logo 方向，給出可以直接執行的品牌識別基礎。</div>
@@ -666,11 +662,10 @@ hr.rule{border:none;border-top:1px solid var(--cream-d);margin:32px 0}
       <div class="pos-item" style="background:#E8F0E8"><div class="pos-lbl">品牌個性</div><div class="pos-val" style="color:var(--charcoal)">穩重但不無聊、專業但不冷漠，像一位真正懂你的家族理財顧問</div></div>
     </div>
   </div>
-</div>
+</div></div>
 
 <!-- ===== S6 期程 ===== -->
-<div class="section" id="s6">
-  <div class="sec-hd">
+<div class="section" id="s6"><div class="page-wrap"><div class="sec-hd">
     <div class="sec-num">SECTION 06 · EXECUTION ROADMAP</div>
     <div class="sec-title">12 週執行期程</div>
     <div class="sec-desc">分六個階段推進，前三週確立品牌骨架與漏斗基礎，中期啟動內容與社群，後期規模化放大。每個階段有明確的「完成條件」，不跳階執行。</div>
@@ -768,7 +763,7 @@ hr.rule{border:none;border-top:1px solid var(--cream-d);margin:32px 0}
     <div class="leg-item"><div class="leg-dot" style="background:#EEE8FB;border:1px solid #AFA9EC"></div>社群 / 活動</div>
     <div class="leg-item"><div class="leg-dot" style="background:var(--cream-d);border:1px solid #BBBBAA"></div>基礎建置</div>
   </div>
-</div>
+</div></div>
 
 <!-- CLOSING -->
 <div class="closing">
