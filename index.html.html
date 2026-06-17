@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>財商品牌策略完整報告 — 鹿氏設計</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green:   #1A3D2B;
+  --green2:  #2A5A3F;
+  --gold:    #C8963E;
+  --gold-l:  #E8B86A;
+  --cream:   #F5F0E8;
+  --cream-d: #E8E1D4;
+  --charcoal:#2C2C2A;
+  --muted:   #6B6B5F;
+  --white:   #FFFFFF;
+  --red-bg:  #FDE8E8;
+  --red-tx:  #8B2020;
+  --grn-bg:  #E4F0E8;
+  --grn-tx:  #1A4D2A;
+  --amb-bg:  #FFF3DC;
+  --amb-tx:  #7A5200;
+  --blu-bg:  #E4EDF8;
+  --blu-tx:  #1A3A6B;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;background:var(--cream);color:var(--charcoal);font-size:14px;line-height:1.8}
+
+/* ── NAV ── */
+.sidenav{position:fixed;left:0;top:0;width:52px;height:100vh;background:var(--green);display:flex;flex-direction:column;align-items:center;padding:24px 0;z-index:100;gap:6px}
+.sidenav a{writing-mode:vertical-rl;text-orientation:mixed;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.35);text-decoration:none;padding:10px 4px;border-radius:2px;transition:color .2s,background .2s}
+.sidenav a:hover,.sidenav a.active{color:var(--gold);background:rgba(200,150,62,0.12)}
+.sidenav .logo-mark{font-family:'Noto Serif TC',serif;font-size:18px;font-weight:700;color:var(--gold);margin-bottom:16px}
+
+/* ── LAYOUT ── */
+.main{margin-left:52px}
+.section{padding:72px 80px;max-width:1040px}
+.section:nth-child(even){background:var(--white)}
+
+/* ── COVER ── */
+.cover{background:var(--green);min-height:100vh;padding:80px 80px 60px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;margin-left:52px}
+.cover::before{content:'';position:absolute;right:-80px;top:-80px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(200,150,62,.12)}
+.cover::after{content:'';position:absolute;right:-30px;top:-30px;width:260px;height:260px;border-radius:50%;border:1px solid rgba(200,150,62,.08)}
+.cover-eyebrow{font-size:11px;letter-spacing:4px;color:var(--gold);margin-bottom:28px}
+.cover-title{font-family:'Noto Serif TC',serif;font-size:64px;font-weight:700;color:var(--white);line-height:1.15;margin-bottom:12px}
+.cover-title span{color:var(--gold)}
+.cover-sub{font-size:18px;color:rgba(255,255,255,.45);font-weight:300;letter-spacing:2px;margin-bottom:56px}
+.cover-rule{width:40px;height:2px;background:var(--gold);margin-bottom:40px}
+.cover-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:640px;border:1px solid rgba(200,150,62,.2)}
+.cover-meta-item{padding:18px 20px;border-right:1px solid rgba(200,150,62,.2)}
+.cover-meta-item:last-child{border-right:none}
+.cover-meta-item label{display:block;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,.35);margin-bottom:6px;text-transform:uppercase}
+.cover-meta-item span{display:block;font-size:13px;color:var(--white);font-weight:500}
+.cover-brand{position:absolute;bottom:48px;right:80px;text-align:right}
+.cover-brand .b-name{font-size:16px;font-weight:700;color:var(--gold)}
+.cover-brand .b-tag{font-size:11px;color:rgba(255,255,255,.3);margin-top:3px;letter-spacing:1px}
+
+/* ── SECTION HEADER ── */
+.sec-hd{margin-bottom:40px}
+.sec-num{font-size:11px;letter-spacing:3px;color:var(--gold);margin-bottom:8px;font-weight:500}
+.sec-title{font-family:'Noto Serif TC',serif;font-size:34px;font-weight:700;color:var(--green);line-height:1.2;margin-bottom:12px}
+.sec-desc{font-size:14px;color:var(--muted);line-height:1.8;max-width:680px}
+
+/* ── CARDS ── */
+.card{background:var(--white);border:1px solid var(--cream-d);border-radius:4px;overflow:hidden}
+.card-accent-green{border-top:4px solid var(--green)}
+.card-accent-gold{border-top:4px solid var(--gold)}
+.card-p{padding:24px 28px}
+.card-title{font-size:15px;font-weight:700;color:var(--charcoal);margin-bottom:8px}
+.card-sub{font-size:12px;color:var(--muted);margin-bottom:14px;letter-spacing:1px}
+.card-body{font-size:13px;color:var(--charcoal);line-height:1.8}
+
+/* ── TAGS ── */
+.tag{display:inline-block;font-size:11px;padding:3px 9px;border-radius:2px;font-weight:500}
+.tag-strong{background:var(--grn-bg);color:var(--grn-tx)}
+.tag-mid{background:var(--amb-bg);color:var(--amb-tx)}
+.tag-weak{background:var(--red-bg);color:var(--red-tx)}
+.tag-tip{background:var(--blu-bg);color:var(--blu-tx)}
+
+/* ── COMPETITOR CARDS ── */
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.comp-card{background:var(--white);border:1px solid var(--cream-d);border-radius:4px;overflow:hidden}
+.comp-header{padding:18px 24px 14px;border-bottom:1px solid var(--cream-d);display:flex;align-items:center;gap:14px}
+.comp-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;flex-shrink:0}
+.comp-name{font-size:15px;font-weight:700;color:var(--charcoal);margin-bottom:3px}
+.comp-type{font-size:11px;letter-spacing:1px;color:var(--muted)}
+.comp-body{padding:18px 24px}
+.channel-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.channel-text{font-size:12px;color:var(--charcoal);line-height:1.6}
+.channel-text strong{font-weight:700}
+.gap-box{background:#FEF8F8;border-left:3px solid #C85050;padding:12px 16px;margin-bottom:10px;font-size:12px;line-height:1.7;color:var(--charcoal)}
+.gap-box ul{padding-left:16px}
+.gap-box li{margin-bottom:4px}
+.sug-box{background:var(--grn-bg);border-left:3px solid var(--green2);padding:12px 16px;font-size:12px;line-height:1.7;color:var(--charcoal)}
+.sug-box ul{padding-left:16px}
+.sug-box li{margin-bottom:4px}
+.col-hd{font-size:10px;letter-spacing:2px;font-weight:700;margin-bottom:12px;text-transform:uppercase}
+.col-hd-good{color:var(--grn-tx)}
+.col-hd-bad{color:var(--red-tx)}
+
+/* ── MATRIX TABLE ── */
+.matrix{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:10px}
+.matrix th,.matrix td{padding:10px 14px;border:1px solid var(--cream-d);text-align:center}
+.matrix th.ch{text-align:left;background:var(--green);color:var(--white)}
+.matrix th.ev{background:var(--gold);color:var(--white)}
+.matrix td.cn{text-align:left;background:var(--cream);font-weight:500;color:var(--charcoal)}
+.matrix tr:nth-child(even) td{background:#FAFAF6}
+.matrix tr:nth-child(even) td.cn{background:var(--cream-d)}
+.star-hi{color:var(--grn-tx);font-weight:700}
+.star-mi{color:var(--amb-tx)}
+.star-lo{color:#AAAAAA}
+.ev-hi{color:var(--grn-tx);font-weight:700;font-size:11px}
+.ev-mi{color:var(--amb-tx);font-size:11px}
+.ev-lo{color:#AAAAAA;font-size:11px}
+
+/* ── TA CARDS ── */
+.ta-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:24px}
+.ta-card{background:var(--white);border:1px solid var(--cream-d);border-radius:4px;overflow:hidden}
+.ta-hd{padding:14px 20px 12px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--cream-d)}
+.ta-icon{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.ta-name{font-size:14px;font-weight:700;color:var(--charcoal)}
+.ta-demo{font-size:11px;color:var(--muted)}
+.ta-bd{padding:16px 20px}
+.ta-row{display:flex;gap:8px;margin-bottom:9px}
+.ta-icon-sm{font-size:14px;flex-shrink:0;margin-top:1px}
+.ta-label{font-size:12px;font-weight:700;color:var(--charcoal);margin-bottom:2px}
+.ta-desc{font-size:12px;color:var(--muted);line-height:1.5}
+.pain-tag{display:inline-block;font-size:10px;padding:3px 9px;background:var(--cream-d);color:var(--muted);border-radius:2px;margin-top:6px;font-weight:500}
+
+/* ── BRAND SECTION ── */
+.name-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
+.name-card{background:var(--white);border:1px solid var(--cream-d);border-radius:4px;padding:22px 24px;cursor:pointer;transition:border-color .15s,transform .15s}
+.name-card:hover{border-color:var(--green);transform:translateY(-2px)}
+.name-card.featured{border:2px solid var(--green);position:relative}
+.name-card.featured::before{content:'首選推薦';position:absolute;top:-1px;left:20px;font-size:10px;padding:3px 10px;background:var(--green);color:var(--gold);letter-spacing:1px;font-weight:700}
+.name-zh{font-family:'Noto Serif TC',serif;font-size:28px;font-weight:700;color:var(--green);margin-bottom:3px;margin-top:14px}
+.name-card.featured .name-zh{margin-top:22px}
+.name-en{font-size:13px;color:var(--gold);letter-spacing:2px;font-weight:700;margin-bottom:14px}
+.name-why{font-size:12px;color:var(--muted);line-height:1.7;border-top:1px solid var(--cream-d);padding-top:12px}
+
+.pos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:28px}
+.pos-item{background:var(--cream);border-radius:4px;padding:18px 20px}
+.pos-lbl{font-size:10px;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:8px;text-transform:uppercase}
+.pos-val{font-size:13px;color:var(--charcoal);line-height:1.7}
+
+/* ── COLOR SWATCHES ── */
+.swatch-row{display:flex;gap:10px;margin-bottom:14px;align-items:flex-end}
+.swatch-block{text-align:center}
+.swatch{border-radius:4px}
+.sw-lbl{font-size:11px;color:var(--muted);margin-top:5px;font-weight:500}
+.sw-hex{font-size:10px;color:var(--muted)}
+
+/* ── LOGO DEMO ── */
+.logo-showcase{background:var(--cream-d);border-radius:4px;padding:24px;display:flex;gap:24px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.logo-v{display:flex;flex-direction:column;align-items:center;gap:8px}
+.logo-lbl{font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.logo-sq{width:80px;height:80px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',serif;font-size:32px;font-weight:700}
+.logo-hz{height:48px;border-radius:6px;display:flex;align-items:center;justify-content:center;padding:0 18px;gap:10px}
+.logo-hz-name{display:flex;flex-direction:column}
+.logo-hz-big{font-size:20px;font-weight:700}
+.logo-hz-sub{font-size:9px;letter-spacing:3px}
+.logo-type-zh{width:120px;height:56px;background:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;border:1.5px solid var(--green);border-radius:6px}
+.logo-type-zh .lz{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;color:var(--green)}
+.logo-type-zh .le{font-size:9px;letter-spacing:2px;color:var(--gold)}
+
+/* ── TIMELINE ── */
+.timeline{margin-bottom:20px}
+.phase{display:grid;grid-template-columns:140px 1fr;gap:0;margin-bottom:3px}
+.phase-lbl{background:var(--green);color:var(--white);padding:18px 18px;display:flex;flex-direction:column;justify-content:center;border-radius:4px 0 0 4px}
+.phase-time{font-size:10px;letter-spacing:1px;color:var(--gold);margin-bottom:4px}
+.phase-name{font-size:13px;font-weight:700}
+.phase-body{background:var(--white);border:1px solid var(--cream-d);border-left:none;border-radius:0 4px 4px 0;padding:16px 22px}
+.phase-goal{font-size:12px;font-weight:700;color:var(--charcoal);margin-bottom:10px}
+.tasks{display:flex;flex-wrap:wrap;gap:6px}
+.task{font-size:11px;padding:4px 10px;border-radius:2px;font-weight:500}
+.task-brand{background:#E0EDE4;color:#1A4D2A}
+.task-content{background:#E8F0FB;color:#1A3A6B}
+.task-channel{background:var(--amb-bg);color:var(--amb-tx)}
+.task-event{background:#EEE8FB;color:#3C2A89}
+.task-neutral{background:var(--cream-d);color:var(--muted)}
+
+/* ── OPPORTUNITY CARDS ── */
+.opp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+.opp-card{background:var(--white);border:1px solid var(--cream-d);border-top:4px solid var(--gold);border-radius:4px;padding:22px 20px}
+.opp-step{font-size:10px;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:8px;text-transform:uppercase}
+.opp-title{font-size:15px;font-weight:700;color:var(--green);margin-bottom:10px}
+.opp-desc{font-size:12px;color:var(--muted);line-height:1.7}
+
+/* ── DIFF CARDS ── */
+.diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px}
+.diff-card{background:var(--cream);border-radius:4px;padding:18px 20px}
+.diff-title{font-size:13px;font-weight:700;color:var(--green);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.diff-desc{font-size:12px;color:var(--charcoal);line-height:1.7}
+
+/* ── HIGHLIGHT BOX ── */
+.hl-box{background:var(--green);color:var(--white);padding:32px 36px;border-radius:4px;margin-bottom:24px;position:relative;overflow:hidden}
+.hl-box::before{content:'';position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(200,150,62,.15)}
+.hl-lbl{font-size:10px;letter-spacing:3px;color:var(--gold);margin-bottom:14px;font-weight:700}
+.hl-items{list-style:none}
+.hl-items li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px;color:rgba(255,255,255,.85);display:flex;gap:12px;line-height:1.6}
+.hl-items li:last-child{border-bottom:none}
+.hl-items li::before{content:'→';color:var(--gold);flex-shrink:0;margin-top:2px}
+
+/* ── CLOSING ── */
+.closing{background:var(--green);padding:60px 80px;display:flex;justify-content:space-between;align-items:center}
+.closing-quote{font-family:'Noto Serif TC',serif;font-size:20px;color:var(--white);line-height:1.8;max-width:540px;border-left:3px solid var(--gold);padding-left:24px}
+.closing-cite{font-size:12px;color:rgba(255,255,255,.4);margin-top:12px;letter-spacing:1px}
+.closing-brand .b{font-size:18px;font-weight:700;color:var(--gold)}
+.closing-brand .s{font-size:11px;color:rgba(255,255,255,.3);margin-top:4px;letter-spacing:1px}
+
+/* ── LEGEND ── */
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
+.leg-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)}
+.leg-dot{width:10px;height:10px;border-radius:2px}
+
+/* ── TOC ── */
+.toc{background:var(--white);border:1px solid var(--cream-d);border-radius:4px;padding:28px 32px;margin-bottom:0;max-width:520px}
+.toc-title{font-size:12px;letter-spacing:2px;color:var(--muted);font-weight:500;margin-bottom:16px;text-transform:uppercase}
+.toc-list{list-style:none}
+.toc-list li{padding:7px 0;border-bottom:1px solid var(--cream-d);display:flex;align-items:center;gap:12px}
+.toc-list li:last-child{border-bottom:none}
+.toc-num{font-size:11px;color:var(--gold);font-weight:700;width:20px}
+.toc-a{font-size:13px;color:var(--charcoal);text-decoration:none;font-weight:500}
+.toc-a:hover{color:var(--green)}
+
+/* ── UTILITY ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+hr.rule{border:none;border-top:1px solid var(--cream-d);margin:32px 0}
+.note{font-size:11px;color:var(--muted);margin-top:8px}
+
+@media print{
+  .sidenav{display:none}
+  .main,.cover{margin-left:0}
+  .section{padding:48px 60px}
+  .phase{break-inside:avoid}
+  .comp-card,.ta-card,.name-card,.opp-card{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- SIDE NAV -->
+<nav class="sidenav">
+  <div class="logo-mark">富</div>
+  <a href="#cover">封面</a>
+  <a href="#s1">競品</a>
+  <a href="#s2">管道</a>
+  <a href="#s3">TA</a>
+  <a href="#s4">策略</a>
+  <a href="#s5">品牌</a>
+  <a href="#s6">期程</a>
+</nav>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <div class="cover-eyebrow">BRAND STRATEGY REPORT · 2026</div>
+  <div class="cover-title">財商教育<br>品牌策略<span>完整報告</span></div>
+  <div class="cover-sub">競品分析 × TA 策略 × 品牌規劃 × 執行期程</div>
+  <div class="cover-rule"></div>
+  <div class="cover-meta">
+    <div class="cover-meta-item"><label>競品分析</label><span>4 家品牌</span></div>
+    <div class="cover-meta-item"><label>目標族群</label><span>4 大 TA</span></div>
+    <div class="cover-meta-item"><label>執行期程</label><span>12 週</span></div>
+    <div class="cover-meta-item"><label>製作單位</label><span>鹿氏設計</span></div>
+  </div>
+  <div class="cover-brand">
+    <div class="b-name">鹿氏設計 Mooser Design</div>
+    <div class="b-tag">品牌顧問 × 品牌形象設計 × 行銷整合顧問</div>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- 目錄 -->
+<div class="section" style="background:var(--cream);" id="toc">
+  <div class="sec-hd">
+    <div class="sec-num">TABLE OF CONTENTS</div>
+    <div class="sec-title">報告目錄</div>
+  </div>
+  <div class="toc">
+    <div class="toc-title">本報告共六大章節</div>
+    <ul class="toc-list">
+      <li><span class="toc-num">01</span><a class="toc-a" href="#s1">競品深度分析 — 四家主要競品的銷售管道與效果評估</a></li>
+      <li><span class="toc-num">02</span><a class="toc-a" href="#s2">管道效益對照矩陣 — 12 個管道 × 4 家競品</a></li>
+      <li><span class="toc-num">03</span><a class="toc-a" href="#s3">目標族群需求拆解 — 四大 TA 的痛點與決策關鍵</a></li>
+      <li><span class="toc-num">04</span><a class="toc-a" href="#s4">品牌策略規劃 — 競品缺口、三位一體模型、差異化方向</a></li>
+      <li><span class="toc-num">05</span><a class="toc-a" href="#s5">品牌識別建議 — 命名、視覺、色調、Logo 方向</a></li>
+      <li><span class="toc-num">06</span><a class="toc-a" href="#s6">12 週執行期程 — 分階段行動清單</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== S1 競品分析 ===== -->
+<div class="section" id="s1">
+  <div class="sec-hd">
+    <div class="sec-num">SECTION 01 · COMPETITIVE ANALYSIS</div>
+    <div class="sec-title">競品深度分析</div>
+    <div class="sec-desc">針對台灣財商教育市場四家主要競品，從網站結構、銷售管道、內容策略、獲客漏斗等面向進行實際檢視，評估各管道執行成效，並整理缺口與優化建議。</div>
+  </div>
+
+  <div class="comp-grid">
+    <!-- 房多多 -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div class="comp-avatar" style="background:#D6EAF8;color:#1A5276">房</div>
+        <div>
+          <div class="comp-name">房多多 不動產財商教育系統</div>
+          <div class="comp-type">直銷型 · content.fundodo.com.tw</div>
+        </div>
+      </div>
+      <div class="comp-body">
+        <div class="two-col">
+          <div>
+            <div class="col-hd col-hd-good">✓ 有效管道</div>
+            <div class="channel-item"><span class="tag tag-strong" style="flex-shrink:0">強效</span><span class="channel-text"><strong>學生締推（MLM邏輯）</strong>：低成本口碑帶客，轉介率佳</span></div>
+            <div class="channel-item"><span class="tag tag-strong" style="flex-shrink:0">強效</span><span class="channel-text"><strong>SEO 部落格</strong>：超過6頁精選文章，搜尋流量長期累積</span></div>
+            <div class="channel-item"><span class="tag tag-mid" style="flex-shrink:0">中效</span><span class="channel-text"><strong>實體門市</strong>：信任感強，高單價成交，但地域性限制</span></div>
+          </div>
+          <div>
+            <div class="col-hd col-hd-bad">✗ 缺口與建議</div>
+            <div class="gap-box"><ul><li>整站無影音內容，觸及天花板低</li><li>對外曝光管道單一，SEO以外幾乎無流量</li><li>品牌視覺老舊，難吸引年輕世代</li></ul></div>
+            <div class="sug-box"><ul><li>30秒短影音導回部落格，形成「短影音→長文→門市」漏斗</li><li>建立 YouTube 累積訂閱</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 無極限 -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div class="comp-avatar" style="background:#E8DAEF;color:#4A235A">無</div>
+        <div>
+          <div class="comp-name">無極限 國際培訓集團</div>
+          <div class="comp-type">行銷型 · mpg1668.com</div>
+        </div>
+      </div>
+      <div class="comp-body">
+        <div class="two-col">
+          <div>
+            <div class="col-hd col-hd-good">✓ 有效管道</div>
+            <div class="channel-item"><span class="tag tag-strong" style="flex-shrink:0">強效</span><span class="channel-text"><strong>Meta 廣告投放</strong>：UTM 追蹤細緻，執行 A/B 測試</span></div>
+            <div class="channel-item"><span class="tag tag-strong" style="flex-shrink:0">強效</span><span class="channel-text"><strong>部落格內容行銷</strong>：2026年5月仍持續更新</span></div>
+            <div class="channel-item"><span class="tag tag-strong" style="flex-shrink:0">強效</span><span class="channel-text"><strong>學員見證系統</strong>：故事化見證文章，降低陌生客顧慮</span></div>
+            <div class="channel-item"><span class="tag tag-mid" style="flex-shrink:0">中效</span><span class="channel-text"><strong>LINE OA 分眾</strong>：每個課程獨立入口</span></div>
+          </div>
+          <div>
+            <div class="col-hd col-hd-bad">✗ 缺口與建議</div>
+            <div class="gap-box"><ul><li>課程品項過多（AI流量、房產、財富思維並行），品牌主線模糊</li><li>YouTube 影片數量與廣告力度不成比例</li></ul></div>
+            <div class="sug-box"><ul><li>選定主打受眾（建議「上班族財務自由」），聚焦品牌主線</li><li>首頁加入「我適合哪個課程」引導測驗</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 共好 -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div class="comp-avatar" style="background:#D5F5E3;color:#145A32">共</div>
+        <div>
+          <div class="comp-name">共好發展總會</div>
+          <div class="comp-type">社群型 · wealthbrain.tw</div>
+        </div>
+      </div>
+      <div class="comp-body">
+        <div class="two-col">
+          <div>
+            <div class="col-hd col-hd-good">✓ 有效管道</div>
+            <div class="channel-item"><span class="tag tag-strong" style="flex-shrink:0">強效</span><span class="channel-text"><strong>FB 封閉社群</strong>：財富旅程社團黏著學員，轉介率高</span></div>
+            <div class="channel-item"><span class="tag tag-strong" style="flex-shrink:0">強效</span><span class="channel-text"><strong>實體活動行銷</strong>：Tesla 車聚、旅遊、市集，學員歸屬感強</span></div>
+            <div class="channel-item"><span class="tag tag-mid" style="flex-shrink:0">中效</span><span class="channel-text"><strong>LINE OA</strong>：諮詢入口，功能型為主</span></div>
+            <div class="channel-item"><span class="tag tag-weak" style="flex-shrink:0">弱效</span><span class="channel-text"><strong>IG</strong>：缺乏系統化內容，成效存疑</span></div>
+          </div>
+          <div>
+            <div class="col-hd col-hd-bad">✗ 缺口與建議</div>
+            <div class="gap-box"><ul><li>網站為 Wix，SEO 能力極差，搜尋流量近零</li><li>對外新客獲取幾乎仰賴現有學員轉介</li></ul></div>
+            <div class="sug-box"><ul><li>IG 內容主題化，把活動亮點轉成 Reels</li><li>網站遷移至 WordPress 改善 SEO 體質</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 黃士豪 -->
+    <div class="comp-card">
+      <div class="comp-header">
+        <div class="comp-avatar" style="background:#FEF9E7;color:#7D6608">黃</div>
+        <div>
+          <div class="comp-name">黃士豪 Will — 個人財務逆向工程</div>
+          <div class="comp-type">個人品牌型 · goodwhale.withwind.tw</div>
+        </div>
+      </div>
+      <div class="comp-body">
+        <div class="two-col">
+          <div>
+            <div class="col-hd col-hd-good">✓ 有效管道</div>
+            <div class="channel-item"><span class="tag tag-strong" style="flex-shrink:0">強效</span><span class="channel-text"><strong>YouTube 個人品牌</strong>：主要流量引擎，深度信任</span></div>
+            <div class="channel-item"><span class="tag tag-strong" style="flex-shrink:0">強效</span><span class="channel-text"><strong>免費說明會漏斗</strong>：一頁式 LP → NT$0 報名 → 付費課，已累積 <strong>86,688 位學員</strong></span></div>
+            <div class="channel-item"><span class="tag tag-strong" style="flex-shrink:0">強效</span><span class="channel-text"><strong>媒體公關</strong>：商周、天下、風傳媒、多檔 Podcast 專訪</span></div>
+            <div class="channel-item"><span class="tag tag-strong" style="flex-shrink:0">強效</span><span class="channel-text"><strong>學員見證</strong>：LP 密集見證截圖，社會認同感強</span></div>
+          </div>
+          <div>
+            <div class="col-hd col-hd-bad">✗ 缺口（您的機會）</div>
+            <div class="gap-box"><ul><li>高度依賴個人 IP，停更即衰減，無法規模化</li><li>無社群互動，學員無連結，二購率受限</li></ul></div>
+            <div class="sug-box" style="background:var(--blu-bg);border-left-color:#1A3A6B"><ul><li>若能建立社群留存機制，可補黃士豪模式的缺口</li><li>86,688 位進說明會未成交者，是最大未開發受眾池</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== S2 管道矩陣 ===== -->
+<div class="section" id="s2">
+  <div class="sec-hd">
+    <div class="sec-num">SECTION 02 · CHANNEL MATRIX</div>
+    <div class="sec-title">管道效益綜合對照</div>
+    <div class="sec-desc">12 個銷售管道跨四家競品的執行狀態與整體效益評估，清楚看出哪些管道已被驗證、哪些仍有空白。</div>
+  </div>
+  <table class="matrix">
+    <thead>
+      <tr>
+        <th class="ch">銷售管道</th>
+        <th style="background:#D6EAF8;color:#1A5276">房多多</th>
+        <th style="background:#E8DAEF;color:#4A235A">無極限</th>
+        <th style="background:#D5F5E3;color:#145A32">共好</th>
+        <th style="background:#FEF9E7;color:#7D6608">黃士豪</th>
+        <th class="ev">整體評估</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="cn">SEO 部落格</td><td class="star-hi">★★★</td><td class="star-hi">★★★</td><td class="star-lo">—</td><td class="star-lo">—</td><td class="ev-hi">高效</td></tr>
+      <tr><td class="cn">廣告投放（Meta / Google）</td><td class="star-lo">—</td><td class="star-hi">★★★</td><td class="star-lo">—</td><td class="star-lo">—</td><td class="ev-hi">高效</td></tr>
+      <tr><td class="cn">YouTube 個人品牌</td><td class="star-lo">—</td><td class="star-mi">★☆</td><td class="star-mi">★☆</td><td class="star-hi">★★★</td><td class="ev-hi">高效</td></tr>
+      <tr><td class="cn">免費說明會漏斗</td><td class="star-lo">—</td><td class="star-mi">★★☆</td><td class="star-lo">—</td><td class="star-hi">★★★</td><td class="ev-hi">高效</td></tr>
+      <tr><td class="cn">學員締推／轉介</td><td class="star-hi">★★★</td><td class="star-mi">★☆</td><td class="star-mi">★★</td><td class="star-lo">—</td><td class="ev-hi">高效</td></tr>
+      <tr><td class="cn">實體門市</td><td class="star-mi">★★☆</td><td class="star-lo">—</td><td class="star-lo">—</td><td class="star-lo">—</td><td class="ev-mi">中效</td></tr>
+      <tr><td class="cn">LINE 官方帳號</td><td class="star-lo">—</td><td class="star-mi">★★☆</td><td class="star-mi">★★☆</td><td class="star-mi">★☆</td><td class="ev-mi">中效</td></tr>
+      <tr><td class="cn">FB 封閉社群</td><td class="star-lo">—</td><td class="star-lo">—</td><td class="star-hi">★★★</td><td class="star-lo">—</td><td class="ev-mi">中效</td></tr>
+      <tr><td class="cn">實體活動行銷</td><td class="star-lo">—</td><td class="star-lo">—</td><td class="star-hi">★★★</td><td class="star-lo">—</td><td class="ev-mi">中效</td></tr>
+      <tr><td class="cn">媒體公關</td><td class="star-lo">—</td><td class="star-mi">★★</td><td class="star-lo">—</td><td class="star-hi">★★★</td><td class="ev-mi">中效</td></tr>
+      <tr><td class="cn">IG 經營</td><td class="star-lo">—</td><td class="star-lo">—</td><td class="star-mi">★☆</td><td class="star-lo">—</td><td class="ev-lo">待觀察</td></tr>
+      <tr><td class="cn">政府合作背書</td><td class="star-lo">—</td><td class="star-mi">★★</td><td class="star-mi">★★</td><td class="star-lo">—</td><td class="ev-lo">低效</td></tr>
+    </tbody>
+  </table>
+  <p class="note">★★★ 執行完整效果明顯 &nbsp;★★☆ 有在做但效果中等 &nbsp;★☆ 有做但效果待加強 &nbsp;— 未使用此管道</p>
+</div>
+
+<!-- ===== S3 TA ===== -->
+<div class="section" id="s3">
+  <div class="sec-hd">
+    <div class="sec-num">SECTION 03 · TARGET AUDIENCE</div>
+    <div class="sec-title">四大目標族群需求拆解</div>
+    <div class="sec-desc">四個 TA 其實是同一個人生的不同階段——受薪族學好個人財務→有天創業成企業主→企業規模起來需傳承規劃→最終就是屆退族的問題。這個品牌有機會做成「人生財務地圖」，讓學員一直升級而不離開。</div>
+  </div>
+
+  <div class="ta-grid">
+    <div class="ta-card">
+      <div class="ta-hd">
+        <div class="ta-icon" style="background:#D6EAF8;color:#0C447C">💼</div>
+        <div><div class="ta-name">中小企業主（男）</div><div class="ta-demo">30歲以上 · 公司決策者</div></div>
+      </div>
+      <div class="ta-bd">
+        <div class="ta-row"><div><div class="ta-label">核心需求</div><div class="ta-desc">資產配置 + 節稅規劃。公司獲利要怎麼留住、怎麼錢滾錢。</div></div></div>
+        <div class="ta-row"><div><div class="ta-label">學習習慣</div><div class="ta-desc">時間破碎，偏好濃縮有效的內容，不喜歡「基礎班」定位。</div></div></div>
+        <div class="ta-row"><div><div class="ta-label">決策關鍵</div><div class="ta-desc">同儕背書。看同類型企業主的真實案例比廣告更有效。</div></div></div>
+        <span class="pain-tag">最怕：交了學費但沒有具體應用場景</span>
+      </div>
+    </div>
+    <div class="ta-card">
+      <div class="ta-hd">
+        <div class="ta-icon" style="background:#D5F5E3;color:#085041">🏪</div>
+        <div><div class="ta-name">中小企業主（女）</div><div class="ta-demo">30歲以上 · 兼顧家庭與事業</div></div>
+      </div>
+      <div class="ta-bd">
+        <div class="ta-row"><div><div class="ta-label">核心需求</div><div class="ta-desc">公司財務 + 個人家庭財務雙軌並行。安全感 > 高報酬。</div></div></div>
+        <div class="ta-row"><div><div class="ta-label">學習習慣</div><div class="ta-desc">社群學習型，在有信任感的圈子裡學習，重視關係。</div></div></div>
+        <div class="ta-row"><div><div class="ta-label">決策關鍵</div><div class="ta-desc">老師品格與形象是否值得信任，比課程內容更優先。</div></div></div>
+        <span class="pain-tag">最怕：被賣課、被推銷下一個課</span>
+      </div>
+    </div>
+    <div class="ta-card">
+      <div class="ta-hd">
+        <div class="ta-icon" style="background:#FFF3DC;color:#633806">👩</div>
+        <div><div class="ta-name">受薪階級（女）</div><div class="ta-demo">月薪5萬左右 · 40歲以上</div></div>
+      </div>
+      <div class="ta-bd">
+        <div class="ta-row"><div><div class="ta-label">核心需求</div><div class="ta-desc">薪水不夠用怎麼辦？退休金準備好了嗎？要學的是「守住錢」。</div></div></div>
+        <div class="ta-row"><div><div class="ta-label">學習習慣</div><div class="ta-desc">喜歡手機碎片化學習，Reels 短影音。情感共鳴內容吸引力高。</div></div></div>
+        <div class="ta-row"><div><div class="ta-label">決策關鍵</div><div class="ta-desc">價格敏感，需要免費試聽或低門檻入門課程先建立信任。</div></div></div>
+        <span class="pain-tag">最怕：交了錢學不會、不實用</span>
+      </div>
+    </div>
+    <div class="ta-card">
+      <div class="ta-hd">
+        <div class="ta-icon" style="background:#EEEDFE;color:#3C3489">🌅</div>
+        <div><div class="ta-name">屆退長輩（男女）</div><div class="ta-demo">60歲以上 · 準備退休</div></div>
+      </div>
+      <div class="ta-bd">
+        <div class="ta-row"><div><div class="ta-label">核心需求</div><div class="ta-desc">資產保全 + 傳承規劃。不是要賺更多，是要守好。</div></div></div>
+        <div class="ta-row"><div><div class="ta-label">學習習慣</div><div class="ta-desc">實體課程 + 社群歸屬感強，同輩陪伴比線上自學更有效。</div></div></div>
+        <div class="ta-row"><div><div class="ta-label">決策關鍵</div><div class="ta-desc">老師專業度、口碑、有沒有「人可以問」是最大考量。</div></div></div>
+        <span class="pain-tag">最怕：被詐騙、投資詐局</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== S4 策略 ===== -->
+<div class="section" id="s4">
+  <div class="sec-hd">
+    <div class="sec-num">SECTION 04 · BRAND STRATEGY</div>
+    <div class="sec-title">品牌策略規劃</div>
+    <div class="sec-desc">這四家競品各有所長，但沒有任何一家同時把三件事做好。這個空白，就是這個品牌可以站的位置。</div>
+  </div>
+
+  <div class="hl-box">
+    <div class="hl-lbl">核心發現：三大市場缺口</div>
+    <ul class="hl-items">
+      <li>沒有任何一家同時做好「內容引流 + 社群黏著 + 系統化銷售漏斗」三件事</li>
+      <li>YouTube + 免費說明會 + 付費課的漏斗只有黃士豪在做，但他完全沒有社群留存機制</li>
+      <li>共好有社群但獲客弱；黃士豪有獲客但無社群；房多多靠人帶人但無數位放大；無極限廣告在跑但品牌模糊</li>
+    </ul>
+  </div>
+
+  <div style="font-size:15px;font-weight:700;color:var(--green);margin-bottom:16px;">建議策略：三位一體模型</div>
+  <div class="opp-grid">
+    <div class="opp-card">
+      <div class="opp-step">Step 01 · 引流</div>
+      <div class="opp-title">建立內容引流</div>
+      <div class="opp-desc">YouTube 長影音（企業主財務主題）+ 短影音 Reels（受薪族焦慮破解）+ 部落格 SEO（屆退規劃關鍵字），以財商知識免費輸出建立信任與搜尋能見度</div>
+    </div>
+    <div class="opp-card">
+      <div class="opp-step">Step 02 · 轉換</div>
+      <div class="opp-title">設計分 TA 說明會漏斗</div>
+      <div class="opp-desc">三場不同主題的免費說明會（企業主場、受薪族場、屆退長輩場），搭配 LINE OA 收名單，再透過廣告投放放大觸及，形成可量化的獲客漏斗</div>
+    </div>
+    <div class="opp-card">
+      <div class="opp-step">Step 03 · 留存</div>
+      <div class="opp-title">經營社群留存</div>
+      <div class="opp-desc">企業主私密社團 + 受薪族打卡社群 + 屆退族實體讀書會，讓學員有歸屬感並持續轉介。學員升級路徑設計（受薪→企業主課程→傳承規劃），客單價自然提升</div>
+    </div>
+  </div>
+
+  <hr class="rule">
+  <div style="font-size:15px;font-weight:700;color:var(--green);margin-bottom:16px;">鶴立雞群的四個差異化核心</div>
+  <div class="diff-grid">
+    <div class="diff-card">
+      <div class="diff-title">🎯 分 TA 說明會，不混流</div>
+      <div class="diff-desc">競品全都是「一場說明會打天下」。針對三種不同 TA 辦不同主題說明會，讓每個人都覺得「這是為我設計的」，成交率顯著提升。</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-title">🔗 數位引流 + 實體社群雙軌</div>
+      <div class="diff-desc">黃士豪有流量無社群；共好有社群無流量。唯有兩者並行，才能同時服務偏線上的受薪族與偏實體的屆退族。</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-title">👤 老師形象 = 品牌人格</div>
+      <div class="diff-desc">四個 TA 中三個對「老師本人是否可信」極度敏感。品牌必須把老師的人格、價值觀、生活方式做透明展示，而非只談課程內容。</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-title">↑ 打造學員升級路徑</div>
+      <div class="diff-desc">受薪族學完個人財務→進入企業主課程→再升級傳承規劃，形成品牌內部升級漏斗，客單價自然提升，不必一直找新客。</div>
+    </div>
+  </div>
+
+  <div style="background:var(--cream-d);border-left:4px solid var(--gold);padding:20px 28px;border-radius:0 4px 4px 0;margin-top:8px">
+    <div style="font-size:11px;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:8px">品牌定位一句話</div>
+    <div style="font-family:'Noto Serif TC',serif;font-size:18px;color:var(--green);line-height:1.7">「競品都在說教你賺錢——這個品牌說的是陪你把錢管好、守好、傳下去。」</div>
+  </div>
+</div>
+
+<!-- ===== S5 品牌識別 ===== -->
+<div class="section" id="s5">
+  <div class="sec-hd">
+    <div class="sec-num">SECTION 05 · BRAND IDENTITY</div>
+    <div class="sec-title">品牌識別建議</div>
+    <div class="sec-desc">從命名邏輯、視覺色調到 Logo 方向，給出可以直接執行的品牌識別基礎。</div>
+  </div>
+
+  <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:14px;">命名方向（三選一）</div>
+  <div class="name-grid">
+    <div class="name-card featured">
+      <div class="name-zh">富根</div>
+      <div class="name-en">WEALTHROOT</div>
+      <div class="name-why">「根」字承載穩健、深耕、傳承三層意涵。企業主聯想到企業根基；屆退族聯想到老根扎深；受薪族聯想到生根生活。英文 WealthRoot 國際化，可延伸子品牌如 WealthRoot Academy。域名 wealthroot.tw 目前仍可取得。</div>
+    </div>
+    <div class="name-card">
+      <div class="name-zh" style="margin-top:8px">理家</div>
+      <div class="name-en">WISHOME</div>
+      <div class="name-why">「理財 × 持家」雙關，親切感強，特別對女性 TA 共鳴。四個族群都有「管好一個家」的需求。英文 WisHome（Wise + Home）簡潔好記，社群帳號好取。</div>
+    </div>
+    <div class="name-card">
+      <div class="name-zh" style="margin-top:8px">恆富</div>
+      <div class="name-en">EVRICH</div>
+      <div class="name-why">「恆」強調長期、永續，對所有 TA 訴求一致——不是一夜致富，是永久持有。英文 Evrich（Ever + Rich）簡短有力，容易念，適合社群帳號 @evrich.tw。</div>
+    </div>
+  </div>
+
+  <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:14px;margin-top:8px;">視覺色調（以「富根」方向展開）</div>
+  <div style="margin-bottom:24px">
+    <div class="card card-p">
+      <div class="card-title">主色調</div>
+      <div class="swatch-row">
+        <div class="swatch-block"><div class="swatch" style="width:60px;height:60px;background:#1A3D2B"></div><div class="sw-lbl">墨綠 主色</div><div class="sw-hex">#1A3D2B</div></div>
+        <div class="swatch-block"><div class="swatch" style="width:52px;height:52px;background:#C8963E"></div><div class="sw-lbl">暖金 輔色</div><div class="sw-hex">#C8963E</div></div>
+        <div class="swatch-block"><div class="swatch" style="width:44px;height:44px;background:#F5F0E8;border:1px solid #DDD8CC"></div><div class="sw-lbl">米白 底色</div><div class="sw-hex">#F5F0E8</div></div>
+        <div class="swatch-block"><div class="swatch" style="width:38px;height:38px;background:#2C2C2A"></div><div class="sw-lbl">深炭 字色</div><div class="sw-hex">#2C2C2A</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-top:12px">墨綠為穩健、生長、扎根，有別於競品常見藍色系；暖金傳遞財富與溫度感；米白提升閱讀舒適度，對屆退族與女性 TA 尤其友善。中文字型建議思源宋體（Noto Serif TC）——具傳承感與質感，與品牌穩重但不失溫度的個性相符。</div>
+    </div>
+  </div>
+
+  <div class="card card-p" style="background:var(--green)">
+    <div style="font-size:11px;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:14px">品牌定位四角（以富根展開）</div>
+    <div class="pos-grid" style="margin-bottom:0">
+      <div class="pos-item" style="background:#E8F0E8"><div class="pos-lbl">品牌主張</div><div class="pos-val" style="color:var(--charcoal)">「不只教你賺錢，陪你把錢管好、守好、傳下去」</div></div>
+      <div class="pos-item" style="background:#E8F0E8"><div class="pos-lbl">一句話定位</div><div class="pos-val" style="color:var(--charcoal)">台灣第一個專為人生各階段設計的財務陪伴平台</div></div>
+      <div class="pos-item" style="background:#E8F0E8"><div class="pos-lbl">對競品差異</div><div class="pos-val" style="color:var(--charcoal)">第一個同時做好「內容引流 + 社群黏著 + 系統化漏斗」的財商品牌</div></div>
+      <div class="pos-item" style="background:#E8F0E8"><div class="pos-lbl">品牌個性</div><div class="pos-val" style="color:var(--charcoal)">穩重但不無聊、專業但不冷漠，像一位真正懂你的家族理財顧問</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== S6 期程 ===== -->
+<div class="section" id="s6">
+  <div class="sec-hd">
+    <div class="sec-num">SECTION 06 · EXECUTION ROADMAP</div>
+    <div class="sec-title">12 週執行期程</div>
+    <div class="sec-desc">分六個階段推進，前三週確立品牌骨架與漏斗基礎，中期啟動內容與社群，後期規模化放大。每個階段有明確的「完成條件」，不跳階執行。</div>
+  </div>
+
+  <div class="timeline">
+    <div class="phase">
+      <div class="phase-lbl"><div class="phase-time">Week 1–2</div><div class="phase-name">品牌奠基</div></div>
+      <div class="phase-body">
+        <div class="phase-goal">確立品牌骨架，讓每件事有依據可循</div>
+        <div class="tasks">
+          <span class="task task-brand">品牌命名定案</span>
+          <span class="task task-brand">Logo 設計委外</span>
+          <span class="task task-brand">色調 / 字型規範</span>
+          <span class="task task-brand">官網首頁改版</span>
+          <span class="task task-brand">IG / FB 視覺統一</span>
+          <span class="task task-neutral">確立老師個人品牌方向</span>
+          <span class="task task-neutral">撰寫品牌故事主文案</span>
+        </div>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-lbl"><div class="phase-time">Week 3–4</div><div class="phase-name">漏斗建置</div></div>
+      <div class="phase-body">
+        <div class="phase-goal">建好「免費→付費」的核心獲客機器</div>
+        <div class="tasks">
+          <span class="task task-channel">設計 3 場分 TA 說明會</span>
+          <span class="task task-channel">LP 一頁式報名頁</span>
+          <span class="task task-channel">LINE OA 自動化訊息</span>
+          <span class="task task-channel">第一場說明會（受薪族）</span>
+          <span class="task task-neutral">定價與課程方案確認</span>
+          <span class="task task-neutral">學員見證素材收集</span>
+        </div>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-lbl"><div class="phase-time">Week 5–7</div><div class="phase-name">內容啟動</div></div>
+      <div class="phase-body">
+        <div class="phase-goal">開始累積搜尋能見度與信任資產</div>
+        <div class="tasks">
+          <span class="task task-content">YouTube 每週 1 支（企業主財務）</span>
+          <span class="task task-content">Reels 每週 2 支（受薪族焦慮破解）</span>
+          <span class="task task-content">部落格 SEO 月 2 篇（屆退規劃）</span>
+          <span class="task task-content">老師個人 Threads 日更</span>
+          <span class="task task-channel">企業主場說明會首辦</span>
+        </div>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-lbl"><div class="phase-time">Week 7–9</div><div class="phase-name">社群建立</div></div>
+      <div class="phase-body">
+        <div class="phase-goal">從「買課的人」變成「品牌的人」</div>
+        <div class="tasks">
+          <span class="task task-event">企業主私密 FB 社團</span>
+          <span class="task task-event">受薪族打卡社群（LINE 群）</span>
+          <span class="task task-event">屆退族第一場實體讀書會</span>
+          <span class="task task-event">學員升級路徑設計</span>
+          <span class="task task-channel">屆退場說明會首辦</span>
+        </div>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-lbl"><div class="phase-time">Week 9–10</div><div class="phase-name">廣告放大</div></div>
+      <div class="phase-body">
+        <div class="phase-goal">用數據驗證的漏斗開始投預算放大</div>
+        <div class="tasks">
+          <span class="task task-channel">Meta 廣告投放（說明會 LP）</span>
+          <span class="task task-channel">YouTube 廣告測試（企業主受眾）</span>
+          <span class="task task-channel">UTM 追蹤建置，每週看數據</span>
+          <span class="task task-content">學員見證影片系列（月 1 支）</span>
+          <span class="task task-neutral">未成交名單再行銷</span>
+        </div>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-lbl"><div class="phase-time">Week 10–12</div><div class="phase-name">規模化</div></div>
+      <div class="phase-body">
+        <div class="phase-goal">讓系統自己跑，老師只做高價值的事</div>
+        <div class="tasks">
+          <span class="task task-event">年度品牌大型活動（跨 TA）</span>
+          <span class="task task-brand">媒體公關稿投遞（商周、天下數位版）</span>
+          <span class="task task-channel">進階課程 / 顧問月費制推出</span>
+          <span class="task task-event">學員轉介計畫正式上線</span>
+          <span class="task task-content">Podcast 首集錄製</span>
+          <span class="task task-neutral">盤點 KPI，規劃隔年預算</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:#E0EDE4;border:1px solid #A8CEAC"></div>品牌形象</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#E8F0FB;border:1px solid #A8BFDE"></div>內容行銷</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--amb-bg);border:1px solid #D4A060"></div>銷售管道</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#EEE8FB;border:1px solid #AFA9EC"></div>社群 / 活動</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--cream-d);border:1px solid #BBBBAA"></div>基礎建置</div>
+  </div>
+</div>
+
+<!-- CLOSING -->
+<div class="closing">
+  <div>
+    <div class="closing-quote">
+      「競品分析的目的不是複製，而是找到沒人站的位置。這四家各有所長，但沒有人同時把三件事做好——這個空白，就是您的機會。」
+    </div>
+    <div class="closing-cite" style="padding-left:27px">— 鹿氏設計 品牌顧問服務 · 2026</div>
+  </div>
+  <div class="closing-brand" style="text-align:right">
+    <div class="b">鹿氏設計 Mooser Design</div>
+    <div class="s">品牌顧問 × 品牌形象設計 × 行銷整合顧問</div>
+    <div class="s" style="margin-top:8px">本報告僅供客戶內部參考使用</div>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<script>
+const sections = document.querySelectorAll('[id]');
+const navLinks = document.querySelectorAll('.sidenav a');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      navLinks.forEach(a => a.classList.remove('active'));
+      const active = document.querySelector('.sidenav a[href="#'+e.target.id+'"]');
+      if(active) active.classList.add('active');
+    }
+  });
+},{threshold:0.3});
+sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
